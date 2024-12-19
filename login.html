@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登录</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .form-container {
+            background: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            background-color: #007BFF;
+            color: #fff;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+        .login-page {
+            background-image: url('/assets/images/bg.jpg'); /* 背景图路径 */
+            background-size: cover; /* 背景图自适应填充 */
+            background-position: center; /* 背景图居中显示 */
+            background-repeat: no-repeat; /* 防止图片重复 */
+            height: 100vh; /* 让背景图覆盖整个页面 */
+            margin: 0; /* 去除页面默认边距 */
+        }
+    </style>
+
+</head>
+<body class="login-page">
+
+<div class="form-container">
+    <h2>登录</h2>
+    <form id="login-form">
+        <label for="username">用户名</label>
+        <input type="text" id="username" placeholder="请输入用户名" required>
+
+        <label for="password">密码</label>
+        <input type="password" id="password" placeholder="请输入密码" required>
+
+        <button type="submit">登录</button>
+    </form>
+    <p id="error-message" style="color: red;"></p>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>中国传统节日</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+    }
+
+    header {
+      background-color: #dc4848;
+      color: #fff;
+      padding: 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+    }
+
+    .content-section {
+      background-image: url('/assets/images/bg.jpg'); /* 背景图路径 */
+      background-size: cover; /* 背景图自适应 */
+      background-position: center; /* 背景图居中显示 */
+      background-repeat: no-repeat; /* 防止图片重复 */
+      padding: 20px; /* 内边距，避免内容贴边 */
+    }
+    /* 标题居中 */
+    header h1 {
+      margin: 0;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    /* 登录/注册按钮在右上角 */
+    .auth-links {
+      margin-right: 20px;
+    }
+
+    .auth-links a, .auth-links span {
+      color: #221f1f;
+      text-decoration: none;
+      background-color: #d0dae4;
+      padding: 5px 10px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .auth-links a:hover,.dropdown-toggle:hover {
+      background-color: #0c71df;
+    }
+
+    /* 用户登出菜单 */
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      top: 80%;
+      right: 0;
+      background-color: #f9f9f9;
+      min-width: 100px;
+      box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+    }
+
+    .dropdown-content a {
+      color: #171313;
+      padding: 8px 10px;
+      text-decoration: none;
+      display: block;
+      cursor: pointer;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #f1f1f1;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+    /* 动态显示下拉菜单 */
+    #user-menu:hover .dropdown-content {
+      display: block;
+      animation: fadeIn 0.3s ease-in-out; /* 动画效果 */
+    }
+
+    /* 登出按钮样式 */
+    #logout-btn {
+      background-color: #dc4848;
+      color: white;
+      border: none;
+      padding: 5px 10px;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+
+    #logout-btn:hover {
+      background-color: #3d84d1;
+    }
+
+    /* 动画效果 */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(-10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    /* 导航栏样式 */
+    nav {
+      background-color: #bdc640;
+      padding: 10px 20px;
+      text-align: center;
+
+      border-radius: 20px; /* 圆角 */
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 15px;
+      font-size: 1.1em;
+      padding: 5px 10px;
+      border-radius: 5px;
+    }
+
+    nav a:hover {
+      background-color: #007BFF;
+    }
+
+    main {
+      text-align: center;
+      padding: 20px;
+    }
+
+    button {
+      padding: 10px 20px;
+      margin: 10px;
+      border: none;
+      background-color: #28a745;
+      color: #fff;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1em;
+    }
+
+    button:hover {
+      background-color: #218838;
+    }
+
+    footer {
+      background-color: #bc2e2e;
+      color: #fff;
+      text-align: center;
+      padding: 10px 0;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+<!-- 头部 -->
+<header>
+  <!-- 登录/注册按钮 -->
+  <!-- 登录/注册按钮或用户名 -->
+  <div  class="auth-links" >
+    <a href="login.html" id="auth-btn">登录/注册</a>
+
+  <div class="dropdown" id="user-menu" style="display: none;">
+    <span id="username-display" class="dropdown-toggle">用户名</span>
+   <div class="dropdown-content">
+     <a href="#" id="logout-btn">登出</a>
+
+   </div>
+  </div>
+  </div>
+  <!-- 居中显示标题 -->
+  <h1>中国传统节日</h1>
+<nav>
+  <a href="search.html">搜索</a>
+</nav>
+</header>
+
+<!-- 主要内容 -->
+<main>
+  <div class="content-section">
+  <h2>节日一览</h2>
+  <div class="festival-container">
+    <!-- 春节 -->
+    <div class="festival-item">
+      <a href="festivals/spring_festival.html">
+        <img src="/assets/images/spring_festival_bg.png" alt="春节" class="festival-image">
+        <p>春节</p >
+      </a >
+      </div>
+    <!-- 元宵节 -->
+    <div class="festival-item">
+      <a href="festivals/lantern_festival.html">
+        <img src="/assets/images/lantern_1.jpg" alt="元宵节" class="festival-image">
+        <p>元宵节</p >
+      </a >
+    </div>
+    <!-- 清明节 -->
+    <div class="festival-item">
+      <a href="festivals/qingming_festival.html">
+        <img src="/assets/images/qingming%201.jpg" alt="清明节" class="festival-image">
+        <p>清明节</p >
+      </a >
+    </div>
+    <!-- 端午节 -->
+    <div class="festival-item">
+      <a href="festivals/dragon_boat_festival.html">
+        <img src="/assets/images/dragon_1.jpg" alt="端午节" class="festival-image">
+        <p>端午节</p >
+      </a >
+    </div>
+    <!-- 中秋节 -->
+    <div class="festival-item">
+      <a href="festivals/mid_autumn_festival.html">
+        <img src="/assets/images/mid_autumn_festival_2.jpg" alt="中秋节" class="festival-image">
+        <p>中秋节</p >
+      </a >
+    </div>
+  </div>
+  </div>
+</main>
+
+<!-- 底部 -->
+<footer>
+  <p>© 2024 中国传统节日与节气介绍</p >
+</footer>
+<script>
+  // 页面加载后检查登录状态
+  document.addEventListener("DOMContentLoaded", function () {
+    const authBtn = document.getElementById("auth-btn"); // 登录/注册按钮
+    const userMenu = document.getElementById("user-menu"); // 用户下拉菜单
+    const usernameDisplay = document.getElementById("username-display"); // 显示用户名
+    const logoutBtn = document.getElementById("logout-btn"); // 登出按钮
+
+    const currentUser = localStorage.getItem("currentUser"); // 获取当前登录用户
+
+    if (currentUser) {
+      // 用户已登录
+      authBtn.style.display = "none"; // 隐藏登录/注册按钮
+      userMenu.style.display = "inline-block"; // 显示下拉菜单
+      usernameDisplay.textContent = currentUser; // 设置用户名显示
+    } else {
+      // 用户未登录
+      authBtn.style.display = "inline-block"; // 显示登录/注册按钮
+      userMenu.style.display = "none"; // 隐藏下拉菜单
+    }
+
+    // 登出逻辑
+    if (logoutBtn) {
+      logoutBtn.addEventListener("click", function () {
+        userMenu.style.animation="fadeOut 0.5s ease-in-out";
+        setTimeout(function () {
+          localStorage.removeItem("currentUser"); // 清除登录状态
+          alert("您已成功登出！");
+          window.location.href = "index.html"; // 刷新页面
+        },500);
+
+      });
+    }
+  });
+</script>
+
+</body>
+</html>

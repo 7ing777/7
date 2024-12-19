@@ -1,0 +1,154 @@
+
+/* 基本重置 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    line-height: 1.6;
+    background-color: #ffffff;
+    color: #333;
+}
+
+
+/* 头部样式 */
+header {
+    background-color: #f46363;
+    color: #ffffff;
+    padding: 1rem;
+    text-align: center;
+}
+
+header nav a {
+    color: #fff;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
+
+/* 主体内容 */
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+/* 节日和照片样式 */
+.festival-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+}
+
+.festival-item {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width:300px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.festival-item:hover {
+    transform: translateY(-5px);
+}
+
+.festival-image {
+    width: 100%;
+    height:200px;
+    object-fit: cover;
+}
+
+.festival-item p {
+    padding: 10px 0;
+    font-weight: bold;
+    color: #555;
+}
+
+.content-box {
+    background: #972121;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.content-box h3 {
+    margin-top: 0;
+    color: #007BFF;
+}
+
+.content-box p {
+    margin: 10px 0;
+    line-height: 1.6;
+}
+/* 给 h3 添加框样式 */
+.content-box h3 {
+    background-color: #007BFF; /* 背景色 */
+    color: #fff; /* 文字颜色 */
+    padding: 10px; /* 内边距 */
+    border: 2px solid #0056b3; /* 边框 */
+    border-radius: 5px; /* 圆角 */
+    margin: -20px -20px 20px -20px; /* 让标题与内容的边框对齐 */
+    text-align: center; /* 居中对齐 */
+}
+
+
+
+
+/* 去掉链接下划线，并设置点击效果 */
+.festival-item a {
+    text-decoration: none; /* 去掉下划线 */
+    color: inherit; /* 继承父元素的颜色 */
+}
+
+.festival-item a:hover {
+    color: #007BFF; /* 鼠标悬停时变色，可自行调整 */
+}
+/* 设置搜索页面背景图 */
+.search-page {
+    background-image: url('assets/images/bg.jpg'); /* 替换为背景图片路径 */
+    background-size: cover; /* 背景图自适应 */
+    background-position: center; /* 居中显示 */
+    background-repeat: no-repeat; /* 防止重复 */
+    height: 100vh; /* 全屏高度 */
+    margin: 0; /* 去掉默认边距 */
+    display: flex; /* 使用 Flexbox 布局 */
+    justify-content: center; /* 水平居中 */
+    align-items: center; /* 垂直居中 */
+}
+
+/* 照片容器样式 */
+.photo-container {
+    width: 1000px;
+    height: 800px;
+    border: 5px solid rgba(255, 255, 255, 0.8); /* 白色半透明边框 */
+    border-radius: 10px; /* 圆角边框 */
+    overflow: hidden; /* 超出部分隐藏 */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* 添加阴影 */
+    background-color: rgba(255, 255, 255, 0.6); /* 半透明背景 */
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 照片样式 */
+.photo-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* 确保图片适应容器 */
+}

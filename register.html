@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>注册</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f8f9fa;
+    }
+
+    .form-container {
+      background: #fff;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      width: 300px;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    input, button {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+
+    button {
+      background-color: #28a745;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #218838;
+    }
+    .register-page {
+      background-image: url('/assets/images/bg.jpg'); /* 背景图路径 */
+      background-size: cover; /* 背景图自适应填充 */
+      background-position: center; /* 背景图居中显示 */
+      background-repeat: no-repeat; /* 防止图片重复 */
+      height: 100vh; /* 让背景图覆盖整个页面 */
+      margin: 0; /* 去除页面默认边距 */
+    }
+  </style>
+</head>
+<body class="register-page">
+<div class="form-container">
+  <h2>注册</h2>
+  <form id="register-form">
+    <label for="new-username">用户名：</label>
+    <input type="text" id="new-username" required><br>
+    <label for="new-password">密码：</label>
+    <input type="password" id="new-password" required><br>
+    <button type="submit">注册</button>
+  </form>
+  <p id="register-message" style="color: green;"></p >
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

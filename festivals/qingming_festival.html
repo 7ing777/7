@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>清明节 - 详细介绍</title>
+  <link rel="stylesheet" href="../style.css">
+  <!-- 单独的局部样式 -->
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-image: url('../assets/images/qingming bg.jpg'); /* 背景图片路径 */
+      background-size: cover; /* 图片覆盖整个页面 */
+      background-position: center; /* 居中显示 */
+      background-repeat: no-repeat; /* 防止重复 */
+      color: #ffffff; /* 文字颜色设置为白色 */
+      font-family: 'Arial', sans-serif; /* 设置字体 */
+    }
+    header {
+        background-color: #408a2b;
+        color: #ffffff;
+        padding: 1rem;
+        text-align: center;
+    }
+    .main-content {
+      text-align: center;
+      margin: 50px auto;
+      padding: 20px;
+      max-width: 800px; /* 限制最大宽度 */
+      background: rgb(95, 223, 102); /* 半透明背景 */
+      border-radius: 10px; /* 圆角 */
+    }
+
+    h1 {
+      font-size: 2.5em;
+    }
+
+    p {
+      font-size: 1.2em;
+      line-height: 1.8;
+    }
+
+    img {
+      width: 80%;
+      border-radius: 10px;
+      margin-top: 20px;
+    }
+
+    .festival-item a {
+      text-decoration: none; /* 去掉下划线 */
+      color: inherit; /* 继承父元素的颜色 */
+    }
+
+    .festival-item a:hover {
+      color: #007BFF; /* 鼠标悬停时变色，可自行调整 */
+    }
+    .content-box {
+      background: #56bf58;
+      border: 2px solid #ddd;
+      border-radius: 10px;
+      padding: 20px;
+      margin: 20px 0;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .content-box h2 {
+      margin-top: 0;
+      color: #ffffff;
+    }
+
+    .content-box p {
+      margin: 10px 0;
+      line-height: 1.6;
+      color: #ffffff;
+    }
+    /* 给 h3 添加框样式 */
+    .content-box h2 {
+      background-color: #47cf4e; /* 背景色 */
+      color: #fff; /* 文字颜色 */
+      padding: 10px; /* 内边距 */
+      border: 2px solid #cfd4da; /* 边框 */
+      border-radius: 5px; /* 圆角 */
+      margin: -20px -20px 20px -20px; /* 让标题与内容的边框对齐 */
+      text-align: center; /* 居中对齐 */
+    }
+  </style>
+</head>
+<body>
+<div class="main-content">
+  <header>
+
+
+    <h1>清明节</h1>
+
+    <nav>
+      <a href="../index.html">返回首页</a>
+      <a href="../search.html">搜索</a>
+    </nav>
+  </header>
+
+  <main>
+      <div class="carousel">
+          <img id="carousel-image" src="../assets/images/qingming%201.jpg" alt="节日图片" width="600">
+          <button onclick="prevImage()">上一张</button>
+          <button onclick="nextImage()">下一张</button>
+      </div>
+      <script>
+          let currentImageIndex = 0;
+          const images = [
+              "../assets/images/qingming%201.jpg",
+              "../assets/images/qingming bg.jpg"
+          ];
+
+          function showImage(index) {
+              const imgElement = document.getElementById("carousel-image");
+              imgElement.src = images[index];
+          }
+
+          function nextImage() {
+              currentImageIndex = (currentImageIndex + 1) % images.length;
+              showImage(currentImageIndex);
+          }
+
+          function prevImage() {
+              currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
+              showImage(currentImageIndex);
+          }
+      </script>
+    <br>
+    <section class="content-box">
+    <h2>历史背景</h2>
+    <p>
+      清明节是中国的传统祭祀节日，每年在阳历4月4日至6日之间庆祝。
+      清明节最早起源于春秋战国时期，最初是寒食节的一个延续，寒食节
+      是为了纪念晋国的忠臣介子推而设立的。传说介子推为了忠诚不愿意
+      接受任命，最后悲剧性死于火灾。为了祭奠他，民间开始禁火，并食冷
+      食，而后清明节逐渐演变为一个扫墓祭祖的节日。清明节在唐朝以后成
+      为了一个正式的节日，具有较强的祭祀性质，强调对先人的怀念与敬重。
+    </p></section><br><br>
+
+<section class="content-box">
+    <h2>文化意义</h2>
+    <img alt="清明节图片" src="../assets/images/qingming%202.jpg">
+    <p>清明节是一个以祭祀祖先、缅怀故人为主的节日。清明节有“扫墓”的传统，
+      家家户户会在这一天去祖先的墓前扫墓、献花、上香，以表达对先人的敬意与
+      怀念。此外，清明节也是春天的节令，象征着生机勃勃和自然的复苏。人们在
+      这一天也有踏青的习惯，去郊外游玩，感受大自然的美好。这个节日不仅是对
+      已故亲人的纪念，也承载着传承家族文化与历史的意义。通过清明节，后代可以缅怀祖先、传承家风，继承和发扬祖先的精神。</p>
+</section><br><br>
+
+    <h3>节日视频</h3>
+    <video width="600" controls>
+      <source src="../assets/videos/qingming%20.mp4" type="video/mp4">
+    </video>
+
+
+    <h3>节日音乐</h3>
+    <audio controls>
+      <source src="../assets/music/spring_festival.mp3" type="audio/mp3">
+    </audio>
+  </main>
+</div>
+
+<footer>
+  <p>© 2024 中国传统节日与节气介绍</p >
+</footer>
+</body>
+</html>

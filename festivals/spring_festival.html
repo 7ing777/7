@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="zh-CN" xmlns="">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>春节 - 详细介绍</title>
+  <link rel="stylesheet" href="../style.css">
+
+  <!-- 单独的局部样式 -->
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-image: url('../assets/images/spring_festival_3.jpg'); /* 背景图片路径 */
+      background-size: cover; /* 图片覆盖整个页面 */
+      background-position: center; /* 居中显示 */
+      background-repeat: no-repeat; /* 防止重复 */
+      color: #ffffff; /* 文字颜色设置为白色 */
+      font-family: 'Arial', sans-serif; /* 设置字体 */
+    }
+
+    .main-content {
+      text-align: center;
+      margin: 50px auto;
+      padding: 20px;
+      max-width: 800px; /* 限制最大宽度 */
+      background: rgb(234, 43, 43); /* 半透明背景 */
+      border-radius: 10px; /* 圆角 */
+    }
+
+    h1 {
+      font-size: 2.5em;
+      color: #dfe6ed;
+    }
+
+    p {
+      font-size: 1.2em;
+      line-height: 1.8;
+    }
+
+    img {
+      width: 80%;
+      border-radius: 10px;
+      margin-top: 20px;
+    }
+
+    .festival-item a {
+      text-decoration: none; /* 去掉下划线 */
+      color: inherit; /* 继承父元素的颜色 */
+    }
+
+    .festival-item a:hover {
+      color: #007BFF; /* 鼠标悬停时变色，可自行调整 */
+    }
+    .content-box {
+      background: #d54343;
+      border: 2px solid #ddd;
+      border-radius: 10px;
+      padding: 20px;
+      margin: 20px 0;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .content-box h2 {
+      margin-top: 0;
+      color: #ffffff;
+    }
+
+    .content-box p {
+      margin: 10px 0;
+      line-height: 1.6;
+      color: #ffffff;
+    }
+    /* 给 h3 添加框样式 */
+    .content-box h3 {
+      background-color: #e42020; /* 背景色 */
+      color: #fff; /* 文字颜色 */
+      padding: 10px; /* 内边距 */
+      border: 2px solid #cfd4da; /* 边框 */
+      border-radius: 5px; /* 圆角 */
+      margin: -20px -20px 20px -20px; /* 让标题与内容的边框对齐 */
+      text-align: center; /* 居中对齐 */
+    }
+
+  </style>
+</head>
+<body>
+<div class="main-content">
+<header>
+
+
+  <h1>春节</h1>
+  <nav>
+    <a href="../index.html">返回首页</a>
+    <a href="../search.html">搜索</a>
+  </nav>
+</header>
+
+<main>
+  <h3>春节倒计时</h3>
+  <p id="countdown"></p >
+  <script>
+    function festivalCountdown(targetDate) {
+      const countdownElement = document.getElementById("countdown");
+      const interval = setInterval(() => {
+        const now = new Date();
+        const timeDiff = new Date(targetDate) - now;
+
+        if (timeDiff <= 0) {
+          clearInterval(interval);
+          countdownElement.innerHTML = "春节已到！";
+          return;
+        }
+
+        const days = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
+        countdownElement.innerHTML = `距离春节还有 ${days} 天`;
+      }, 1000);
+    }
+    festivalCountdown("2025-01-29"); // 设定下一个春节日期
+  </script>
+  <img alt="春节图片" src="../assets/images/spring_festival_bg.png">
+  <br>
+  <section class="content-box">
+  <h3>历史背景</h3>
+  <p>春节，也被称为“农历新年”，是中国最重要的传统节日之一，通常
+     在农历的正月初一庆祝，标志着新一年的开始。春节的起源可以追溯
+     到几千年前的古代中国。最初的元宵源于古人对自然和时令变化的敬
+     畏，尤其是对“年兽”的传说。据说，年兽每到除夕夜便会出来作恶，古
+     人通过祭祀、放鞭炮、贴春联等方式驱赶年兽，祈求新的一年安康。随
+     着时间的推移，春节逐渐成为一个包含家庭团聚、辞旧迎新、欢庆丰收
+     等多重文化活动的节日。
+  </p>
+  </section><br><br>
+<section class="content-box">
+  <h3>文化意义</h3>
+  <img alt="春节图片" src="../assets/images/spring_festival_2.jpg">
+
+  <p>春节代表着新的开始和希望，是中国最重要的家庭节日，强调亲情和团圆。
+    春节的庆祝活动通常持续数天，家家户户都忙着准备年夜饭、打扫房屋、贴春
+    联、挂灯笼。春节期间，吃团圆饭是最重要的传统，象征着家庭的和谐美满。
+    此外，元宵还强调“红色文化”，通过红包、穿新衣、贴红对联等方式祈求好运。
+    春节不仅是一个家庭聚会的时刻，也是全民欢庆的时刻，它传递了中国人对新的
+    一年充满希望与期待的心愿。.</p>
+</section><br><br>
+
+  <h3>节日视频</h3>
+  <video width="600" controls>
+    <source src="../assets/videos/spring 1.mp4" type="video/mp4">
+  </video>
+
+
+  <h3>节日音乐</h3>
+  <audio controls>
+    <source src="../assets/music/spring_festival.mp3" type="audio/mp3">
+  </audio>
+</main>
+</div>
+
+
+<footer>
+  <p>© 2024 中国传统节日与节气介绍</p >
+</footer>
+</body>
+</html>

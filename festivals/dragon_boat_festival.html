@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>端午节 - 详细介绍</title>
+    <link rel="stylesheet" href="../style.css">
+    <!-- 单独的局部样式 -->
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url('/assets/images/dragon_bg.jpg'); /* 背景图片路径 */
+            background-size: cover; /* 图片覆盖整个页面 */
+            background-position: center; /* 居中显示 */
+            background-repeat: no-repeat; /* 防止重复 */
+            color: #ffffff; /* 文字颜色设置为白色 */
+            font-family: 'Arial', sans-serif; /* 设置字体 */
+        }
+
+        .main-content {
+            text-align: center;
+            margin: 50px auto;
+            padding: 20px;
+            max-width: 800px; /* 限制最大宽度 */
+            background: rgb(126, 237, 159); /* 半透明背景 */
+            border-radius: 10px; /* 圆角 */
+        }
+
+        h1 {
+            font-size: 2.5em;
+        }
+
+        p {
+            font-size: 1.2em;
+            line-height: 1.8;
+        }
+
+        img {
+            width: 80%;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        .festival-item a {
+            text-decoration: none; /* 去掉下划线 */
+            color: inherit; /* 继承父元素的颜色 */
+        }
+
+        .festival-item a:hover {
+            color: #007BFF; /* 鼠标悬停时变色，可自行调整 */
+        }
+        .content-box {
+            background: #56d848;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .content-box h2 {
+            margin-top: 0;
+            color: #ffffff;
+        }
+
+        .content-box p {
+            margin: 10px 0;
+            line-height: 1.6;
+            color: #ffffff;
+        }
+        /* 给 h3 添加框样式 */
+        .content-box h3 {
+            background-color: #e42020; /* 背景色 */
+            color: #fff; /* 文字颜色 */
+            padding: 10px; /* 内边距 */
+            border: 2px solid #cfd4da; /* 边框 */
+            border-radius: 5px; /* 圆角 */
+            margin: -20px -20px 20px -20px; /* 让标题与内容的边框对齐 */
+            text-align: center; /* 居中对齐 */
+        }
+        header {
+            background-color: #56d848;
+            color: #ffffff;
+            padding: 1rem;
+            text-align: center;
+        }
+        .reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 1s ease-out, transform 1s ease-out;
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+<div class="main-content">
+    <header>
+
+
+        <h1>端午节</h1>
+        <nav>
+            <a href="../index.html">返回首页</a>
+            <a href="../search.html">搜索</a>
+        </nav>
+    </header>
+
+    <main>
+        <img alt="端午节照片" src="../assets/images/dragon_1.jpg">
+        <br>
+        <section class="content-box">
+        <h2 class="reveal">历史背景</h2>
+        <p class="reveal">端午节起源于中国古代的春秋战国时期，最著名的传说与爱国诗人屈原有关。屈原是楚国的忠臣，在国家面临危机时，他悲愤而投江自尽。为了拯救屈原，百姓纷纷投粽子入江，以防江中的水怪吞噬他的身体。后来，端午节成为了纪念屈原的日子，并逐渐发展为一个具有驱邪避灾、祈求安康意义的节日。端午节也与龙舟比赛、佩香囊、挂艾草等习俗密切相关，旨在驱除邪恶和祈求健康平安。</p><br><br>
+        </section>
+        <br>
+        <section class="content-box">
+        <h2 class="reveal">文化意义</h2>
+            <img alt="端午节照片" src="../assets/images/dragon_2.jpg">
+        <p class="reveal">端午节具有强烈的传统文化内涵，尤其是在家庭和社区层面。赛龙舟是端午节的标志性活动之一，这一活动象征着勇气和团结。此外，端午节期间吃粽子是最广为流传的习俗，粽子形态各异，吃粽子寓意着驱邪保安、家庭和睦。佩戴香囊和挂艾草也是端午节的重要习俗，象征着消灾祈福。端午节也是人们纪念屈原的时刻，屈原的忠诚和爱国精神激励了几千年的中华民族，端午节因此成为了一个弘扬忠诚、勇气和民族精神的节日。</p><br><br>
+        </section>
+        <script>
+            function revealOnScroll() {
+                const reveals = document.querySelectorAll(".reveal");
+                const windowHeight = window.innerHeight;
+
+                reveals.forEach((reveal) => {
+                    const revealTop = reveal.getBoundingClientRect().top;
+
+                    if (revealTop < windowHeight - 50) {
+                        reveal.classList.add("visible");
+                    }
+                });
+            }
+
+            window.addEventListener("scroll", revealOnScroll);
+            revealOnScroll(); // 初始触发一次
+        </script>
+        <br>
+        <h3>节日视频</h3>
+        <video width="600" controls>
+            <source src="../assets/videos/dragon_boat.mp4" type="video/mp4">
+        </video>
+
+
+        <h3>节日音乐</h3>
+        <audio controls>
+            <source src="../assets/music/spring_festival.mp3" type="audio/mp3">
+        </audio>
+    </main>
+</div>
+
+<footer>
+    <p>© 2024 中国传统节日与节气介绍</p >
+</footer>
+</body>
+</html>

@@ -1,0 +1,173 @@
+
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>元宵 - 详细介绍</title>
+  <!-- 局部样式 -->
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-image: url('assets/images/spring_festival_bg.png'); /* 背景图片路径 */
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      color: #ffffff;
+      font-family: 'Arial', sans-serif;
+    }
+
+    .main-content {
+      text-align: center;
+      margin: 50px auto;
+      padding: 20px;
+      max-width: 800px;
+      background: rgba(0, 0, 0, 0.6);
+      border-radius: 10px;
+    }
+
+    h1 {
+      font-size: 2.8em;
+      margin-bottom: 20px;
+      color: #FFD700;
+    }
+
+    h2 {
+      font-size: 2em;
+      margin-top: 20px;
+      color: #FFA500;
+    }
+
+    p {
+      font-size: 1.2em;
+      line-height: 1.8;
+      text-align: left;
+      margin: 10px 0;
+    }
+
+    img {
+      width: 100%;
+      border-radius: 10px;
+      margin: 20px 0;
+    }
+
+    video, audio {
+      width: 100%;
+      margin: 20px 0;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 20px;
+      color: #ffffff;
+      font-size: 0.9em;
+    }
+
+  </style>
+</head>
+<body>
+<!-- 内容区域 -->
+<div class="main-content">
+  <h1>元宵</h1>
+
+  <!-- 图片 -->
+  <img src="D:\IDEA  and JAVA\jie ri\assets\images\spring_festival_bg.png" alt="元宵习俗图片">
+
+  <!-- 历史背景 -->
+  <h2>历史背景</h2>
+  <p>
+    元宵，又称“农历新年”，是中国最重要的传统节日，已有四千多年的历史。最早起源于上古时代人们对自然和岁首的崇拜。元宵的习俗可以追溯到古代岁首祭祀活动，人们在辞旧迎新之际，祈求风调雨顺、国泰民安。
+  </p >
+
+  <!-- 文化意义 -->
+  <h2>文化意义</h2>
+  <p>
+    元宵象征着团圆、辞旧迎新和希望。在这一天，家家户户张贴春联、挂灯笼、放鞭炮、吃年夜饭、守岁等，表达对新一年的美好祝愿。同时，元宵也是中国文化的重要象征，是连接家庭成员情感的重要时刻。
+  </p >
+
+  <!-- 视频 -->
+  <h2>元宵视频介绍</h2>
+  <video controls>
+    <source src="media/spring_festival_video.mp4" type="video/mp4">
+    您的浏览器不支持播放此视频，请升级浏览器。
+  </video>
+
+  <!-- 音乐 -->
+  <h2>元宵背景音乐</h2>
+  <audio controls>
+    <source src="media/spring_festival_music.mp3" type="audio/mp3">
+    您的浏览器不支持播放此音频，请升级浏览器。
+  </audio>
+</div>
+
+<!-- 页脚 -->
+<footer>
+  <p>© 2024 中国传统节日与节气介绍</p >
+</footer>
+</body>
+
+
+
+<p>
+  元宵节，又称上元节，庆祝的是农历正月十五日，是元宵的最后一个节日，标志着
+  元宵庆祝活动的结束。元宵节的起源可以追溯到西汉时期，当时，汉武帝曾命令在
+  这一天举行祭天仪式。元宵节也有与火焰有关的传统，早期的灯会活动既是祭天的
+  一部分，也逐渐演变为大众娱乐活动。到了唐代，元宵节的灯会逐渐盛大，民间开
+  始举办各种形式的灯谜活动，灯笼成为了元宵节的象征。元宵节除了是一个宗教与
+  祭祀的节日，也逐渐转变为全民欢庆的节日。
+</p >
+<p>
+  元宵节是中国传统文化中的团圆节日，象征着家庭和睦与幸福。灯会是元宵节最具
+  代表性的活动，家家户户悬挂灯笼，城市街头也会举行大型的灯展，灯笼的造型千
+  奇百怪，色彩斑斓。元宵节的另一大特色是猜灯谜，寓意着智慧与好运。吃元宵（汤
+  圆）是元宵节的传统食物，汤圆的圆形象征着团圆与和谐美满。元宵节不仅是元宵的
+  延续，它还传递了人们对未来一年美好生活的期许和对家人团聚的珍视。
+</p >
+
+
+// 检查登录状态
+document.addEventListener("DOMContentLoaded", function () {
+const username = localStorage.getItem('loggedInUser');
+const authLinks = document.getElementById('auth-links');
+
+if (username) {
+authLinks.innerHTML = `
+<div class="dropdown">
+  <span>${username} ▼</span>
+  <div class="dropdown-content">
+    <a href="#" onclick="logout()">退出登录</a>
+  </div>
+</div>
+`;
+}
+});
+
+// 登录/注册逻辑
+function handleLoginRegister() {
+const username = prompt("请输入用户名：");
+if (username) {
+const users = JSON.parse(localStorage.getItem("users")) || {};
+
+// 验证用户名是否存在
+if (users[username]) {
+// 如果用户名存在，验证密码
+const password = prompt("请输入密码：");
+if (users[username] === password) {
+alert("登录成功！");
+localStorage.setItem("loggedInUser", username);
+window.location.reload();
+} else {
+alert("密码错误，请重试！");
+}
+} else {
+// 用户名不存在，跳转到注册页面
+const goToRegister = confirm("用户名不存在，是否跳转到注册页面？");
+if (goToRegister) {
+window.location.href = "register.html";
+}
+}
+} else {
+alert("用户名不能为空！");
+}
+}

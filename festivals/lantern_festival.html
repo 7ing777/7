@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>元宵 - 详细介绍</title>
+  <link rel="stylesheet" href="../style.css">
+  <!-- 单独的局部样式 -->
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-image: url('/assets/images/lantern_2.jpg'); /* 背景图片路径 */
+      background-size: cover; /* 图片覆盖整个页面 */
+      background-position: center; /* 居中显示 */
+      background-repeat: no-repeat; /* 防止重复 */
+      color: #ffffff; /* 文字颜色设置为白色 */
+      font-family: 'Arial', sans-serif; /* 设置字体 */
+    }
+
+    .main-content {
+      text-align: center;
+      margin: 50px auto;
+      padding: 20px;
+      max-width: 800px; /* 限制最大宽度 */
+      background: rgb(213, 34, 34); /* 半透明背景 */
+      border-radius: 10px; /* 圆角 */
+    }
+
+    h1 {
+      font-size: 2.5em;
+    }
+
+    p {
+      font-size: 1.2em;
+      line-height: 1.8;
+    }
+
+    img {
+      width: 80%;
+      border-radius: 10px;
+      margin-top: 20px;
+    }
+
+    .festival-item a {
+      text-decoration: none; /* 去掉下划线 */
+      color: inherit; /* 继承父元素的颜色 */
+    }
+
+    .festival-item a:hover {
+      color: #007BFF; /* 鼠标悬停时变色，可自行调整 */
+    }
+    .content-box {
+      background: #d54343;
+      border: 2px solid #ddd;
+      border-radius: 10px;
+      padding: 20px;
+      margin: 20px 0;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .content-box h2 {
+      margin-top: 0;
+      color: #ffffff;
+    }
+
+    .content-box p {
+      margin: 10px 0;
+      line-height: 1.6;
+      color: #ffffff;
+    }
+    /* 给 h2 添加框样式 */
+    .content-box h2 {
+      background-color: #e42020; /* 背景色 */
+      color: #fff; /* 文字颜色 */
+      padding: 10px; /* 内边距 */
+      border: 2px solid #cfd4da; /* 边框 */
+      border-radius: 5px; /* 圆角 */
+      margin: -20px -20px 20px -20px; /* 让标题与内容的边框对齐 */
+      text-align: center; /* 居中对齐 */
+    }
+    .lantern {
+        position: absolute;
+        width: 50px;
+        height: 80px;
+        background: red;
+        border-radius: 50%;
+        box-shadow: 0 0 10px rgba(255, 0, 0, 0.8);
+        animation: floatLantern 5s linear infinite;
+    }
+
+    @keyframes floatLantern {
+        0% { transform: translateY(100vh); }
+        100% { transform: translateY(-10vh); }
+    }
+  </style>
+</head>
+<body>
+<div class="main-content">
+  <header>
+
+
+    <h1>元宵</h1>
+    <nav>
+      <a href="../index.html">返回首页</a>
+      <a href="../search.html">搜索</a>
+    </nav>
+  </header>
+
+  <main>
+      <div id="lanterns"></div>
+      <script>
+          function createLanterns() {
+              const lanternContainer = document.getElementById("lanterns");
+              for (let i = 0; i < 10; i++) {
+                  const lantern = document.createElement("div");
+                  lantern.classList.add("lantern");
+                  lantern.style.left = Math.random() * 100 + "vw";
+                  lantern.style.animationDuration = (Math.random() * 3 + 5) + "s";
+                  lanternContainer.appendChild(lantern);
+              }
+          }
+          createLanterns();
+      </script>
+    <br>
+      <img alt="元宵节图片" src="../assets/images/lantern_1.jpg">
+    <section class="content-box">
+    <h2>历史背景</h2>
+    <p>
+      元宵节，又称上元节，庆祝的是农历正月十五日，是元宵的最后一个节日，标志着
+      元宵庆祝活动的结束。元宵节的起源可以追溯到西汉时期，当时，汉武帝曾命令在
+      这一天举行祭天仪式。元宵节也有与火焰有关的传统，早期的灯会活动既是祭天的
+      一部分，也逐渐演变为大众娱乐活动。到了唐代，元宵节的灯会逐渐盛大，民间开
+      始举办各种形式的灯谜活动，灯笼成为了元宵节的象征。元宵节除了是一个宗教与
+      祭祀的节日，也逐渐转变为全民欢庆的节日。
+    </p >
+    </section><br><br>
+
+<section class="content-box">
+    <h2>文化意义</h2>
+    <img alt="元宵节图片" src="../assets/images/lantern_3.jpg">
+    <p>
+      元宵节是中国传统文化中的团圆节日，象征着家庭和睦与幸福。灯会是元宵节最具
+      代表性的活动，家家户户悬挂灯笼，城市街头也会举行大型的灯展，灯笼的造型千
+      奇百怪，色彩斑斓。元宵节的另一大特色是猜灯谜，寓意着智慧与好运。吃元宵（汤
+      圆）是元宵节的传统食物，汤圆的圆形象征着团圆与和谐美满。元宵节不仅是元宵的
+      延续，它还传递了人们对未来一年美好生活的期许和对家人团聚的珍视。
+    </p >
+</section><br><br>
+
+    <h3>节日视频</h3>
+    <video width="600" controls>
+      <source src="../assets/videos/lantern%20.mp4" type="video/mp4">
+    </video>
+
+
+    <h3>节日音乐</h3>
+    <audio controls>
+      <source src="../assets/music/spring_festival.mp3" type="audio/mp3">
+    </audio>
+  </main>
+</div>
+
+<footer>
+  <p>© 2024 中国传统节日与节气介绍</p >
+</footer>
+</body>
+</html>

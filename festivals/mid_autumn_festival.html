@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>中秋节 - 详细介绍</title>
+  <link rel="stylesheet" href="../style.css">
+  <!-- 单独的局部样式 -->
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-image: url('../assets/images/mid_antumn_featival.jpg'); /* 背景图片路径 */
+      background-size: cover; /* 图片覆盖整个页面 */
+      background-position: center; /* 居中显示 */
+      background-repeat: no-repeat; /* 防止重复 */
+      color: #ffffff; /* 文字颜色设置为白色 */
+      font-family: 'Arial', sans-serif; /* 设置字体 */
+    }
+
+    .main-content {
+      text-align: center;
+      margin: 50px auto;
+      padding: 20px;
+      max-width: 800px; /* 限制最大宽度 */
+      background: rgb(156, 46, 46); /* 半透明背景 */
+      border-radius: 10px; /* 圆角 */
+    }
+
+    h1 {
+      font-size: 2.5em;
+    }
+
+    p {
+      font-size: 1.2em;
+      line-height: 1.8;
+    }
+
+    img {
+      width: 80%;
+      border-radius: 10px;
+      margin-top: 20px;
+    }
+
+    .festival-item a {
+      text-decoration: none; /* 去掉下划线 */
+      color: inherit; /* 继承父元素的颜色 */
+    }
+
+    .festival-item a:hover {
+      color: #007BFF; /* 鼠标悬停时变色，可自行调整 */
+    }
+    .content-box {
+      background: #d54343;
+      border: 2px solid #ddd;
+      border-radius: 10px;
+      padding: 20px;
+      margin: 20px 0;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .content-box h2 {
+      margin-top: 0;
+      color: #ffffff;
+    }
+
+    .content-box p {
+      margin: 10px 0;
+      line-height: 1.6;
+      color: #ffffff;
+    }
+    /* 给 h3 添加框样式 */
+    .content-box h2 {
+      background-color: #e42020; /* 背景色 */
+      color: #fff; /* 文字颜色 */
+      padding: 10px; /* 内边距 */
+      border: 2px solid #cfd4da; /* 边框 */
+      border-radius: 5px; /* 圆角 */
+      margin: -20px -20px 20px -20px; /* 让标题与内容的边框对齐 */
+      text-align: center; /* 居中对齐 */
+    }
+  </style>
+</head>
+<body>
+<div class="main-content">
+  <header>
+
+
+    <h1>中秋节</h1>
+    <nav>
+      <a href="../index.html">返回首页</a>
+      <a href="../search.html">搜索</a>
+    </nav>
+  </header>
+
+  <main>
+    <img alt="中秋节图片" src="../assets/images/mid_autumn_festival_2.jpg">
+    <br>
+<!--   随机祝福语-->
+    <h3 id="mid-autumn-greeting"></h3 >
+    <script>
+      const greetings = [
+        "但愿人长久，千里共婵娟。",
+        "祝您中秋快乐，阖家团圆，幸福安康！",
+        "月到中秋分外明，家家团圆笑盈盈。",
+        "愿中秋月光洒满您家，带来好运与美满！",
+        "千里试问平安否？且把思念遥相寄，祝您中秋佳节幸福美满！",
+        "花好月圆人团聚，心想事成梦成真！"
+      ];
+
+      function displayRandomGreeting() {
+        const randomIndex = Math.floor(Math.random() * greetings.length);
+        document.getElementById("mid-autumn-greeting").innerText = greetings[randomIndex];
+      }
+
+      displayRandomGreeting();
+    </script>
+    <section class="content-box">
+    <h2>历史背景</h2>
+    <p>中秋节起源于中国古代的秋收节，早在唐代就有了庆祝中秋的习惯。这个节日通常定于农历八月十五，是中国传统的丰收节，也是一个象征团圆与和谐的节日。与许多中国节日一样，中秋节也与古代祭月和祭天活动有关。最著名的与中秋节相关的传说是嫦娥奔月的故事。根据传说，嫦娥为了避免她丈夫后羿为求长生不死而失去生命，偷吃了不死药，最终飞向月宫。从此，嫦娥成为了中秋节的象征，月亮也成为团圆的象征。</p><br><br>
+    </section>
+
+    <section class="content-box">
+    <h2>文化意义</h2>
+      <img alt="中秋节图片" src="../assets/images/mid%203.jpg">
+    <p>中秋节不仅是一个农业节日，象征着丰收与感恩，也象征着家庭团圆。中秋节的传统习俗包括吃月饼、赏月、放灯笼等，月饼的圆形象征着团圆和完整，寓意着家庭和睦与幸福。中秋夜的月亮是最圆最亮的，象征着一年中的最完美时刻，人们在这一天与亲朋好友一起赏月，共享天伦之乐。此外，中秋节也是表达思乡之情的时刻，很多在外的游子会在这一天回家，与家人团聚，感受亲情与温暖。通过中秋节，人们传达了对美好生活的追求与对亲情的珍视。.</p><br><br>
+    </section>
+    <h3>节日视频</h3>
+    <video width="600" controls>
+      <source src="../assets/videos/mid_autumn.mp4" type="video/mp4">
+    </video>
+    <br>
+    <br>
+
+    <h3>节日音乐</h3>
+    <audio controls>
+      <source src="../assets/music/spring_festival.mp3" type="audio/mp3">
+    </audio>
+  </main>
+</div>
+
+<footer>
+  <p>© 2024 中国传统节日与节气介绍</p >
+</footer>
+</body>
+</html>
